@@ -6,8 +6,8 @@
     from telethon.tl.functions.channels import JoinChannelRequest
     from telethon.tl.functions.channels import LeaveChannelRequest
 
-    APP_ID = 682610
-    API_HASH = '030132b51d598e464419ccee7f20212d' 
+    APP_ID = API
+    API_HASH = 'HASH' 
 
     client = TelegramClient('anon', APP_ID, API_HASH).start()
     #6281315912347
