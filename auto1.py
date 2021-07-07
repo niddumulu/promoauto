@@ -1,22 +1,21 @@
-    import time
-    import os
-    from telethon.sync import TelegramClient
-    from telethon.sessions import StringSession
-    from telethon import TelegramClient, sync, events, utils
-    from telethon.tl.functions.channels import JoinChannelRequest
-    from telethon.tl.functions.channels import LeaveChannelRequest
+import time
+import os
+from telethon.sync import TelegramClient
+from telethon.sessions import StringSession
+from telethon import TelegramClient, sync, events, utils
+from telethon.tl.functions.channels import JoinChannelRequest
+from telethon.tl.functions.channels import LeaveChannelRequest
 
-    APP_ID = 682610
-    API_HASH = '030132b51d598e464419ccee7f20212d' 
+api_id = 682610
+api_hash = '030132b51d598e464419ccee7f20212d'
+client = TelegramClient('munajatkeren', api_id, api_hash).start()
 
-    client = TelegramClient('anon', APP_ID, API_HASH).start()
-    #6281315912347
-    seconds= int(0)
-    minutes= int(0)
+seconds = int(0)
+minutes = int(0)
 
-    run = "dia"
-    while run.lower()=="dia":
-      if seconds == 10:
+run = "dia"
+while run.lower() == "dia":
+    if seconds == 10:
           pesan = "/promote"
           client.send_message('promoteautobot', pesan)
       
