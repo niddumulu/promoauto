@@ -34,6 +34,8 @@ while run.lower() == "dia":
 
     if seconds == 240:
         seconds = 0
+        
+        run = "diaa"
 
     os.system('clear')
     seconds = (seconds+1)
