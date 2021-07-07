@@ -19,23 +19,23 @@ while run.lower() == "dia":
           pesan = "/promote"
           client.send_message('promoteautobot', pesan)
       
-      if seconds == 25:
-          for message in client.iter_messages('promoteautobot', limit=1):
-            (utils.get_display_name(message.sender), message.message)
-            user = (message.message)
-            pesan = client.get_messages('promoteauto', None)
-            #print(pesan[0])
-            client(JoinChannelRequest(user))
-            client.forward_messages(user, pesan[0])
-            #client(LeaveChannelRequest(user))
-            #print ("Lapor")
-            pesanisi = ("Lapor!! Posting ke group @"+user)
-            client.send_message('checkonoff', pesanisi)
+    if seconds == 25:
+        for message in client.iter_messages('promoteautobot', limit=1):
+          (utils.get_display_name(message.sender), message.message)
+          user = (message.message)
+          pesan = client.get_messages('promoteauto', None)
+          #print(pesan[0])
+          client(JoinChannelRequest(user))
+          client.forward_messages(user, pesan[0])
+          #client(LeaveChannelRequest(user))
+          #print ("Lapor")
+          pesanisi = ("Lapor!! Posting ke group @"+user)
+          client.send_message('checkonoff', pesanisi)
 
-      if seconds == 240:
-          seconds = 0
+    if seconds == 240:
+        seconds = 0
 
-      os.system('clear')
-      seconds = (seconds+1)
-      print (seconds)
-      time.sleep(1)
+    os.system('clear')
+    seconds = (seconds+1)
+    print (seconds)
+    time.sleep(1)
